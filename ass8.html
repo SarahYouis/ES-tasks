@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let stdMap = new Map();
+        stdMap.set("elyas", {
+            grade:
+                [
+                    { coursName: "JS", grade: "Exelent" },
+                    { coursName: "JQ", grade: "Good" },
+                    { coursName: "CSS", grade: "V.Good" }
+                ]
+        });
+        stdMap.set("rewaa", {
+            grade:
+                [
+                    { coursName: "HTML", grade: "Exelent" },
+                    { coursName: "ES6", grade: "Good" },
+                    { coursName: "CSS", grade: "V.Good" }
+                ]
+        });
+        stdMap.set("marya", {
+            grade:
+                [
+                    { coursName: "bootstrap", grade: "Exelent" },
+                    { coursName: "JQ", grade: "Good" },
+                    { coursName: "JS", grade: "V.Good" }
+                ]
+        });
+
+        for (let [name, grad] of stdMap) {
+            console.log(`name is : ${name}`);
+            for(let i of grad.grade)
+            {
+                // because he dont know what return
+                console.log(`and grade is: ${i.grade}`);
+                // console.log(`and grade is: `);
+                // console.log(i);
+            }
+        }
+
+        
+
+    </script>
+</body>
+
+</html>

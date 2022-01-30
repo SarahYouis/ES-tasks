@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        class person {
+            constructor(name = "", age = 20) {
+                this.name = name;
+                this.age = age;
+            }
+
+            print() {
+                console.log(`
+                Person Name: ${this.name}, 
+                and his age: ${this.age}`)
+            }
+
+            static whoAmI() {
+                console.log("I am an person");
+            }
+        }
+
+        let obj = new person("sarah", 26);
+        obj.print();
+
+        person.whoAmI();
+
+
+
+        ///////////////////////////////////////////////////// ass5
+
+        class student extends person {
+          
+            constructor(name, age, University, faculty, grade) {
+                super(name, age);
+                this.University = University;
+                this.faculty = faculty;
+                this.grade = grade;
+              
+            }
+
+            print() {
+                super.print();
+                console.log(`
+                {Std_name} ${this.name} 
+                {Std_age}${this.age}
+                {Std_unversity}${this.University}
+                {Std_faculty}${this.faculty}
+                {Std_grade}${this.grade}`);
+            }
+
+            static whoAmI() {
+                console.log("I am an student");
+            }
+        }
+
+        let obj1 = new student("Hagar", 30, "Al-Azhr", "medicen","A+");
+        obj1.print();
+        student.whoAmI();
+
+        // mixin
+        let setMixin = {
+            printName(){
+                console.log(`${this.name}`);
+            }, 
+            printAge(){
+                console.log(`${this.age}`);
+            }
+        }
+// serve word
+        Object.assign(student.prototype,setMixin);
+        obj1.printName();
+        obj1.printAge();
+
+    </script>
+</body>
+
+</html>

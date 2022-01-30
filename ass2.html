@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // for of
+        // spread operator 
+        function sum3(...arrnum)
+        {
+            let res=0;
+            for(let n of arrnum)
+            {
+                res += n ;
+            }
+            return res;
+        }
+        let arrnum = [];
+        console.log(sum3(2,3,4));
+
+
+        // for in
+        let arr = [3,4,6,8,12,34];
+        for(let i in arr){
+            console.log(`this is value from (for in): ${i}` );
+
+            // console.log(`the value is: ${arr[i]}`);
+        }
+        
+        console.log(``);
+
+        // for of
+        for(let i of arr){
+            console.log(`this is value from (for of): ${i}`);
+        }
+
+        console.log(``);
+        // for each
+        arr.forEach(i => {
+            console.log(`this is value from (for each): ${i}`);
+        })
+
+    </script>
+</body>
+
+</html>
